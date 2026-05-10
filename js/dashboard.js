@@ -42,9 +42,7 @@ function addTask() {
 
 function complete(id) {
     db.run(
-        //marcam ca finalizat
-
-        "UPDATE tasks SET completed = 1 WHERE id = ?",
+        "UPDATE tasks SET completed = NOT completed WHERE id = ?",
         [id],
         () => {
             loadTasks();
@@ -53,6 +51,12 @@ function complete(id) {
 }
 
 function del(id) {
+    const confirmDelete = confirm("Are you sure you want to delete this task?");
+
+    if (!confirmDelete) {
+        return;
+    }
+
     db.run("DELETE FROM tasks WHERE id = ?", [id], loadTasks);
 }
 
