@@ -1,6 +1,7 @@
 const db = require('../database');
 const bcrypt = require('bcrypt');
 
+
 async function register() {
     const errorEl = document.getElementById("error");
     errorEl.innerText = "";
@@ -18,7 +19,7 @@ async function register() {
 
     //validare lungime parolă 
     if (password.length < 4) {
-        errorEl.innerText = "Password must be at least 4 characters!";
+        errorEl.innerText = ""Password is too short!"";
         return;
     }
 
@@ -52,6 +53,6 @@ async function register() {
         );
 
     } catch (e) {
-        errorEl.innerText = "Something went wrong!";
+        errorEl.innerText = ""Unexpected error occurred!"";
     }
 }
