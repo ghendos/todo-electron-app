@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Register</title>
+    <meta charset="UTF-8">
+    <title>Register</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 320px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
 
-h2 {
-    margin-bottom: 20px;
-}
+        h2 {
+            margin-bottom: 20px;
+        }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-}
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
 
 
 
-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #48bb78;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #48bb78;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-button:hover {
-    background: #38a169;
-}
+        button:hover {
+            background: #2f855a;
+            transform: scale(1.02);
+            transition: 0.2s;
+        }
 
-.back {
-    background: #ccc;
-    color: black;
-}
-</style>
+        .back {
+            background: #ccc;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="card">
-    <h2>Create Account</h2>
+    <div class="card">
+        <h2>Create Your Account</h2>
+        <p>Register to start managing your tasks</p>
 
-    <input id="user" placeholder="Username">
-    <input id="pass" type="password" placeholder="Password">
-    <input id="confirm" type="password" placeholder="Confirm Password">
-    <p id="error" style="color:red;"></p>
+        <input id="user" placeholder="Username">
+        <input id="pass" type="password" placeholder="Password">
+        <input id="confirm" type="password" placeholder="Confirm Password">
+        <p id="error" style="color:red;"></p>
 
-    <button onclick="register()">Register</button>
-    <button class="back" onclick="goLogin()">Back to Login</button>
-</div>
+        <button onclick="register()">Register</button>
+        <button class="back" onclick="goLogin()">Back to Login</button>
+    </div>
 
-<script src="../js/register.js"></script>
+    <script src="../js/register.js"></script>
 
-<script>
-function goLogin() {
-    window.location = "login.html";
-}
-</script>
+    <script>
+        function goLogin() {
+            window.location = "login.html";
+        }
+    </script>
 
 </body>
+
 </html>
