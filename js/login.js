@@ -24,7 +24,7 @@ function login() {
             localStorage.setItem("user", JSON.stringify(user));
             window.location = "dashboard.html";
         } else {
-            alert("Wrong password");
+            alert("Invalid password!");
         }
     });
 }
